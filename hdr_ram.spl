@@ -1,0 +1,11 @@
+[Inputs]
+rd_en
+clk
+=pps_count[31:0]=
+=frame_count[31:0]=
+[Outputs]
+=data_out[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel hdr_ram
+

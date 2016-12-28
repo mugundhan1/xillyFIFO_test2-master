@@ -1,0 +1,28 @@
+Running: /media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /media/Mordor/xillyFIFO_test2-master/ram_test_isim_beh.exe -prj /media/Mordor/xillyFIFO_test2-master/ram_test_beh.prj work.ram_test work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "/media/Mordor/xillyFIFO_test2-master/prog_full_gen.v" into library work
+Analyzing Verilog file "/media/Mordor/xillyFIFO_test2-master/hdr_ram.v" into library work
+Analyzing Verilog file "/media/Mordor/xillyFIFO_test2-master/fr_ctr.v" into library work
+Analyzing Verilog file "/media/Mordor/xillyFIFO_test2-master/ctrl_mod.v" into library work
+Analyzing Verilog file "/media/Mordor/xillyFIFO_test2-master/ram_test.vf" into library work
+Analyzing Verilog file "/media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 95680 KB
+Fuse CPU Usage: 950 ms
+Compiling module Ctrl
+Compiling module hdr_ram
+Compiling module fr_ctr
+Compiling module prog_full_gen
+Compiling module ram_test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 6 Verilog Units
+Built simulation executable /media/Mordor/xillyFIFO_test2-master/ram_test_isim_beh.exe
+Fuse Memory Usage: 655908 KB
+Fuse CPU Usage: 960 ms
+GCC CPU Usage: 290 ms

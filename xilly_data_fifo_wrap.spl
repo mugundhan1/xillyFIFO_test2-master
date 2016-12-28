@@ -1,0 +1,14 @@
+[Inputs]
+rst
+clk
+wr_en
+rd_en
+=din[31:0]=
+[Outputs]
+full
+empty
+=dout[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel xilly_data_fifo_wrap
+

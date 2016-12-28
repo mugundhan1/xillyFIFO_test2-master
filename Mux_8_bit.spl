@@ -1,0 +1,10 @@
+[Inputs]
+Sel
+=Header_data[31:0]=
+=Fifo_Data[31:0]=
+[Outputs]
+=Data_Out[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Mux_8_bit
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\xillyFIFO_test\xillyFIFO_test\xillyctr.ncd
+OUTFILE=E:\xillyFIFO_test\xillyFIFO_test\xillyctr.bit
+FAMILY=Virtex5
+PART=xc5vlx110t-1ff1136
+WORKINGDIR=E:\xillyFIFO_test\xillyFIFO_test
+LICENSE=ISE
+USER_INFO=__0_0_0

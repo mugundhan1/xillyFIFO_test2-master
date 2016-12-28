@@ -1,0 +1,6 @@
+vhdtdtfi -lib work E:/XillyLBI/ver1/fifo_wrap.v -lang verilog -prj xillycounter -o fifo_wrap.spl -module fifo_wrap -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 fifo_wrap.spl E:/xillycounter/fifo_wrap.sym 
+vhdtdtfi -lib work /media/Mordor/XillyLBI/ver1/fifo_wrap.v -lang verilog -prj xillycounter -o fifo_wrap.spl -module fifo_wrap -template /media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 fifo_wrap.spl /media/Mordor/xillycounter-master/fifo_wrap.sym 
+vhdtdtfi -lib work /media/Mordor/XillyLBI/ver1/fifo_wrap.v -lang verilog -prj xillycounter -o fifo_wrap.spl -module fifo_wrap -template /media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w fifo_wrap.spl /media/Mordor/xillycounter-master/fifo_wrap.sym 

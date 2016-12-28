@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+xilly_data_fifo_wrap instance_name (
+    .rst(rst), 
+    .wr_clk(wr_clk), 
+    .rd_clk(rd_clk), 
+    .wr_en(wr_en), 
+    .rd_en(rd_en), 
+    .din(din), 
+    .dout(dout), 
+    .full(full), 
+    .empty(empty)
+    );
+
+

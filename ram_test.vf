@@ -1,0 +1,59 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ram_test.vf
+// /___/   /\     Timestamp : 12/28/2016 10:22:51
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath /media/Mordor/xillyFIFO_test2-master/ipcore_dir -intstyle ise -family virtex5 -verilog /media/Mordor/xillyFIFO_test2-master/ram_test.vf -w /media/Mordor/xillyFIFO_test2-master/ram_test.sch
+//Design Name: ram_test
+//Device: virtex5
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module ram_test(clk, 
+                pps_count, 
+                prg_clk, 
+                data_out, 
+                en, 
+                fifo_rd);
+
+    input clk;
+    input [31:0] pps_count;
+    input prg_clk;
+   output [31:0] data_out;
+   output en;
+   output fifo_rd;
+   
+   wire prog_full;
+   wire XLXN_4;
+   wire XLXN_8;
+   wire [31:0] XLXN_13;
+   
+   Ctrl  XLXI_1 (.clk(clk), 
+                .prg_full(prog_full), 
+                .en(en), 
+                .fifo_rd(fifo_rd), 
+                .fr_cnt(XLXN_8), 
+                .Header_Address(), 
+                .h_en(XLXN_4));
+   hdr_ram  XLXI_2 (.clk(clk), 
+                   .frame_count(XLXN_13[31:0]), 
+                   .pps_count(pps_count[31:0]), 
+                   .rd_en(XLXN_4), 
+                   .data_out(data_out[31:0]));
+   fr_ctr  XLXI_4 (.clk(clk), 
+                  .en(XLXN_8), 
+                  .val(XLXN_13[31:0]));
+   prog_full_gen  XLXI_5 (.prg_clk(prg_clk), 
+                         .prog_full(prog_full));
+endmodule

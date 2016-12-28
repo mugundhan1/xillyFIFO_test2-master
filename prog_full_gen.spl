@@ -1,0 +1,8 @@
+[Inputs]
+prg_clk
+[Outputs]
+prog_full
+[BiDir]
+[ATTRIBUTES]
+VeriModel prog_full_gen
+

@@ -1,0 +1,2 @@
+verilog work "../XillyLBI/ver1/counter.v"
+verilog work "E:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v"

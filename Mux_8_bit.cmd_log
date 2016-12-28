@@ -1,0 +1,2 @@
+vhdtdtfi -lib work /media/Mordor/xillycounter-master/Mux_8_bit.v -lang verilog -prj xillycounter -o Mux_8_bit.spl -module Mux_8_bit -template /media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Mux_8_bit.spl /media/Mordor/xillycounter-master/Mux_8_bit.sym 

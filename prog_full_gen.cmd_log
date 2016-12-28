@@ -1,0 +1,6 @@
+vhdtdtfi -lib work /media/Mordor/xillyFIFO_test2-master/prog_full_gen.v -lang verilog -prj xillycounter -o prog_full_gen.spl -module prog_full_gen -template /media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w prog_full_gen.spl /media/Mordor/xillyFIFO_test2-master/prog_full_gen.sym 
+vhdtdtfi -lib work /media/Mordor/xillyFIFO_test2-master/prog_full_gen.v -lang verilog -prj xillycounter -o prog_full_gen.spl -module prog_full_gen -template /media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w prog_full_gen.spl /media/Mordor/xillyFIFO_test2-master/prog_full_gen.sym 
+vhdtdtfi -lib work /media/Mordor/xillyFIFO_test2-master/prog_full_gen.v -lang verilog -prj xillycounter -o prog_full_gen.spl -module prog_full_gen -template /media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w prog_full_gen.spl /media/Mordor/xillyFIFO_test2-master/prog_full_gen.sym 

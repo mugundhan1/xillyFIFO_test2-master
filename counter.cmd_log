@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/XillyLBI/ver1/counter.v -lang verilog -prj xillycounter -o counter.spl -module counter -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 counter.spl E:/xillycounter/counter.sym 

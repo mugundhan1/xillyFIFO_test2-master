@@ -1,0 +1,13 @@
+[Inputs]
+clk
+prg_full
+[Outputs]
+h_en
+fifo_rd
+fr_cnt
+en
+=Header_Address[1:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Ctrl
+

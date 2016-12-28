@@ -1,0 +1,2 @@
+vhdtdtfi -lib work /media/Mordor/xillycounter-master/fr_ctr.v -lang verilog -prj xillycounter -o fr_ctr.spl -module fr_ctr -template /media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w fr_ctr.spl /media/Mordor/xillycounter-master/fr_ctr.sym 
