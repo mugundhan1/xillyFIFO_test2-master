@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/edg_det_wrap.v -lang verilog -prj xillycounter -o edg_det_wrap.spl -module edg_det_wrap -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w edg_det_wrap.spl E:/xillyFIFO_test2-master/edg_det_wrap.sym 

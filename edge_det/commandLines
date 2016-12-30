@@ -1,0 +1,1 @@
+/media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE/sysgen/bin/lin64/saferun -a /media/Mordor/xillyFIFO_test2-master/netlist/edge_det_cw_import.log -- /media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE//bin/lin64/xtclsh ProjectGeneration.tcl

@@ -1,0 +1,10 @@
+[Inputs]
+clk
+ce
+in_x0
+[Outputs]
+out_x0
+[BiDir]
+[ATTRIBUTES]
+VeriModel edg_det_wrap
+

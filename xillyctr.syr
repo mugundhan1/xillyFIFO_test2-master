@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: xillyctr.prj
 
@@ -103,7 +103,7 @@ Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
 ---- Other Options
-Cores Search Directories           : {"ipcore_dir" "../../xillycounter/ipcore_dir"  }
+Cores Search Directories           : {"ipcore_dir" "edge_det"  }
 
 =========================================================================
 
@@ -199,11 +199,11 @@ Compiling verilog file "pcie_cores/pcie_v5/source/pcie_v5.v" in library work
 Module <xillybus_core> compiled
 Compiling verilog file "ipcore_dir/xilly_data_fifo.v" in library work
 Module <pcie_v5> compiled
-Compiling verilog file "../../xillycounter/ipcore_dir/ctr_fifo.v" in library work
+Compiling verilog file "ipcore_dir/ctr_fifo.v" in library work
 Module <xilly_data_fifo> compiled
-Compiling verilog file "../../XillyLBI/ver1/fifo_wrap.v" in library work
+Compiling verilog file "../XillyLBI/ver1/fifo_wrap.v" in library work
 Module <ctr_fifo> compiled
-Compiling verilog file "../../XillyLBI/ver1/counter.v" in library work
+Compiling verilog file "../XillyLBI/ver1/counter.v" in library work
 Module <fifo_wrap> compiled
 Compiling verilog file "xilly_data_fifo_wrap.v" in library work
 Module <counter> compiled
@@ -211,15 +211,25 @@ Compiling verilog file "xillybus.v" in library work
 Module <xilly_data_fifo_wrap> compiled
 Compiling verilog file "Mux_8_bit.v" in library work
 Module <xillybus> compiled
-Compiling verilog file "clk_ctrl.v" in library work
+Compiling verilog file "ipcore_dir/frame_counter.v" in library work
 Module <Mux_8_bit> compiled
-Compiling verilog file "ctrl_mod.v" in library work
+Compiling verilog file "clk_ctrl.v" in library work
+Module <frame_counter> compiled
+Compiling verilog file "Header_RAM2.v" in library work
 Module <clk_ctrl> compiled
+Compiling verilog file "fr_ctr.v" in library work
+Module <Header_RAM2> compiled
+Compiling verilog file "edg_det_wrap.v" in library work
+Module <fr_ctr> compiled
+Compiling verilog file "ctrl_mod.v" in library work
+Module <edg_det_wrap> compiled
 Compiling verilog file "byte_reorder.v" in library work
 Module <Ctrl> compiled
 Compiling verilog file "xillyctr.vf" in library work
 Module <byte_reorder_8bit> compiled
+Compiling verilog file "edge_det/edge_det_cw_bb.v" in library work
 Module <xillyctr> compiled
+Module <edge_det_cw> compiled
 No errors in compilation
 Analysis of file <"xillyctr.prj"> succeeded.
  
@@ -246,6 +256,12 @@ Analyzing hierarchy for module <xilly_data_fifo_wrap> in library <work>.
 Analyzing hierarchy for module <byte_reorder_8bit> in library <work>.
 
 Analyzing hierarchy for module <xillybus> in library <work>.
+
+Analyzing hierarchy for module <fr_ctr> in library <work>.
+
+Analyzing hierarchy for module <Header_RAM2> in library <work>.
+
+Analyzing hierarchy for module <edg_det_wrap> in library <work>.
 
 Analyzing hierarchy for module <pcie_v5> in library <work> with parameters.
 	ACK_TO = "0000001000000100"
@@ -1423,19 +1439,19 @@ Analyzing hierarchy for module <sync_fifo> in library <work> with parameters.
 	TCQ = "00000000000000000000000000000001"
 	WIDTH = "00000000000000000000000001001000"
 
-WARNING:Xst:2591 - "xillyctr.vf" line 71: attribute on instance <IOSTANDARD> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "xillyctr.vf" line 76: attribute on instance <IOSTANDARD> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <xillyctr>.
-WARNING:Xst:852 - "xillyctr.vf" line 74: Unconnected input port 'RST_IN' of instance 'XLXI_1' is tied to GND.
-WARNING:Xst:852 - "xillyctr.vf" line 100: Unconnected input port 'Header_data' of instance 'XLXI_20' is tied to GND.
-WARNING:Xst:852 - "xillyctr.vf" line 114: Unconnected input port 'user_r_read_32_eof' of instance 'XLXI_37' is tied to GND.
-WARNING:Xst:852 - "xillyctr.vf" line 114: Unconnected input port 'user_r_mem_8_data' of instance 'XLXI_37' is tied to GND.
-WARNING:Xst:852 - "xillyctr.vf" line 114: Unconnected input port 'user_r_mem_8_empty' of instance 'XLXI_37' is tied to GND.
-WARNING:Xst:852 - "xillyctr.vf" line 114: Unconnected input port 'user_r_mem_8_eof' of instance 'XLXI_37' is tied to GND.
-WARNING:Xst:852 - "xillyctr.vf" line 114: Unconnected input port 'user_w_mem_8_full' of instance 'XLXI_37' is tied to GND.
+WARNING:Xst:852 - "xillyctr.vf" line 79: Unconnected input port 'RST_IN' of instance 'XLXI_1' is tied to GND.
+WARNING:Xst:852 - "xillyctr.vf" line 119: Unconnected input port 'user_r_read_32_eof' of instance 'XLXI_37' is tied to GND.
+WARNING:Xst:852 - "xillyctr.vf" line 119: Unconnected input port 'user_r_mem_8_data' of instance 'XLXI_37' is tied to GND.
+WARNING:Xst:852 - "xillyctr.vf" line 119: Unconnected input port 'user_r_mem_8_empty' of instance 'XLXI_37' is tied to GND.
+WARNING:Xst:852 - "xillyctr.vf" line 119: Unconnected input port 'user_r_mem_8_eof' of instance 'XLXI_37' is tied to GND.
+WARNING:Xst:852 - "xillyctr.vf" line 119: Unconnected input port 'user_w_mem_8_full' of instance 'XLXI_37' is tied to GND.
+WARNING:Xst:2211 - "ipcore_dir/frame_counter.v" line 155: Instantiating black box module <frame_counter>.
 Module <xillyctr> is correct for synthesis.
  
     Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <pcieclk_ibuf> in unit <xillyctr>.
@@ -1445,6 +1461,8 @@ Module <xillyctr> is correct for synthesis.
     Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <pcieclk_ibuf> in unit <xillyctr>.
     Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <pcieclk_ibuf> in unit <xillyctr>.
     Set user-defined property "IOSTANDARD =  DEFAULT" for instance <pcieclk_ibuf> in unit <xillyctr>.
+    Set user-defined property "SYN_BLACK_BOX =  1" for instance <XLXI_58> in unit <xillyctr>.
+    Set user-defined property "SYN_NOPRUNE =  1" for instance <XLXI_58> in unit <xillyctr>.
 Analyzing module <clk_ctrl> in library <work>.
 Module <clk_ctrl> is correct for synthesis.
  
@@ -1495,7 +1513,7 @@ Analyzing module <counter> in library <work>.
 Module <counter> is correct for synthesis.
  
 Analyzing module <fifo_wrap> in library <work>.
-WARNING:Xst:2211 - "../../xillycounter/ipcore_dir/ctr_fifo.v" line 27: Instantiating black box module <ctr_fifo>.
+WARNING:Xst:2211 - "ipcore_dir/ctr_fifo.v" line 27: Instantiating black box module <ctr_fifo>.
 Module <fifo_wrap> is correct for synthesis.
  
 Analyzing module <Ctrl> in library <work>.
@@ -3907,6 +3925,21 @@ WARNING:Xst:916 - "pcie_cores/pcie_v5/source/extend_clk.v" line 120: Delay is ig
 WARNING:Xst:915 - Message (916) is reported only 5 times for each module.
 Module <extend_clk> is correct for synthesis.
  
+Analyzing module <fr_ctr> in library <work>.
+Module <fr_ctr> is correct for synthesis.
+ 
+Analyzing module <Header_RAM2> in library <work>.
+INFO:Xst:1433 - Contents of array <Mem> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:905 - "Header_RAM2.v" line 44: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <rd_en>, <Mem>
+Module <Header_RAM2> is correct for synthesis.
+ 
+    Set property "SYN_NOPRUNE = 1" for unit <frame_counter>.
+Analyzing module <edg_det_wrap> in library <work>.
+Module <edg_det_wrap> is correct for synthesis.
+ 
+    Set user-defined property "BLACK_BOX =  1" for instance <ed1> in unit <edg_det_wrap>.
+WARNING:Xst:37 - Detected unknown constraint/property "BLACK_BOX". This constraint/property is not supported by the current software release and will be ignored.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -3928,7 +3961,7 @@ INFO:Xst:2679 - Register <reg_cfg_wr_hdr> in unit <pcie_blk_cf_err> has a consta
 INFO:Xst:2679 - Register <reg_incr_cplu> in unit <pcie_blk_cf_err> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <counter>.
-    Related source file is "../../XillyLBI/ver1/counter.v".
+    Related source file is "../XillyLBI/ver1/counter.v".
     Found 16-bit up counter for signal <val>.
     Summary:
 	inferred   1 Counter(s).
@@ -3958,6 +3991,24 @@ Unit <Mux_8_bit> synthesized.
 Synthesizing Unit <byte_reorder_8bit>.
     Related source file is "byte_reorder.v".
 Unit <byte_reorder_8bit> synthesized.
+
+
+Synthesizing Unit <fr_ctr>.
+    Related source file is "fr_ctr.v".
+    Found 32-bit up counter for signal <val>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <fr_ctr> synthesized.
+
+
+Synthesizing Unit <Header_RAM2>.
+    Related source file is "Header_RAM2.v".
+WARNING:Xst:647 - Input <Address<3:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rd_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <Mem<3>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <Mem<0>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:737 - Found 32-bit latch for signal <data_out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+Unit <Header_RAM2> synthesized.
 
 
 Synthesizing Unit <extend_clk>.
@@ -4500,7 +4551,7 @@ Unit <sync_fifo_2> synthesized.
 
 Synthesizing Unit <my_SRL16E_1>.
     Related source file is "pcie_cores/pcie_v5/source/pcie_blk_ll_credit.v".
-    Using one-hot encoding for signal <$COND_115>.
+    Using one-hot encoding for signal <$COND_114>.
     Found 16-bit register for signal <data>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -4509,7 +4560,7 @@ Unit <my_SRL16E_1> synthesized.
 
 Synthesizing Unit <my_SRL16E_2>.
     Related source file is "pcie_cores/pcie_v5/source/pcie_blk_ll_credit.v".
-    Using one-hot encoding for signal <$COND_116>.
+    Using one-hot encoding for signal <$COND_115>.
     Found 16-bit register for signal <data>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -4518,7 +4569,7 @@ Unit <my_SRL16E_2> synthesized.
 
 Synthesizing Unit <my_SRL16E_3>.
     Related source file is "pcie_cores/pcie_v5/source/pcie_blk_ll_credit.v".
-    Using one-hot encoding for signal <$COND_117>.
+    Using one-hot encoding for signal <$COND_116>.
     Found 16-bit register for signal <data>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -4527,7 +4578,7 @@ Unit <my_SRL16E_3> synthesized.
 
 Synthesizing Unit <my_SRL16E_4>.
     Related source file is "pcie_cores/pcie_v5/source/pcie_blk_ll_credit.v".
-    Using one-hot encoding for signal <$COND_118>.
+    Using one-hot encoding for signal <$COND_117>.
     Found 16-bit register for signal <data>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -4616,7 +4667,7 @@ Unit <my_SRL16E_12> synthesized.
 
 Synthesizing Unit <my_SRL16E_13>.
     Related source file is "pcie_cores/pcie_v5/source/pcie_blk_ll_credit.v".
-    Using one-hot encoding for signal <$COND_127>.
+    Using one-hot encoding for signal <$COND_126>.
     Found 16-bit register for signal <data>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -4625,7 +4676,7 @@ Unit <my_SRL16E_13> synthesized.
 
 Synthesizing Unit <my_SRL16E_14>.
     Related source file is "pcie_cores/pcie_v5/source/pcie_blk_ll_credit.v".
-    Using one-hot encoding for signal <$COND_128>.
+    Using one-hot encoding for signal <$COND_127>.
     Found 16-bit register for signal <data>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -4634,7 +4685,7 @@ Unit <my_SRL16E_14> synthesized.
 
 Synthesizing Unit <my_SRL16E_15>.
     Related source file is "pcie_cores/pcie_v5/source/pcie_blk_ll_credit.v".
-    Using one-hot encoding for signal <$COND_129>.
+    Using one-hot encoding for signal <$COND_128>.
     Found 16-bit register for signal <data>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -4643,7 +4694,7 @@ Unit <my_SRL16E_15> synthesized.
 
 Synthesizing Unit <my_SRL16E_16>.
     Related source file is "pcie_cores/pcie_v5/source/pcie_blk_ll_credit.v".
-    Using one-hot encoding for signal <$COND_130>.
+    Using one-hot encoding for signal <$COND_129>.
     Found 16-bit register for signal <data>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -4652,7 +4703,7 @@ Unit <my_SRL16E_16> synthesized.
 
 Synthesizing Unit <my_SRL16E_17>.
     Related source file is "pcie_cores/pcie_v5/source/pcie_blk_ll_credit.v".
-    Using one-hot encoding for signal <$COND_131>.
+    Using one-hot encoding for signal <$COND_130>.
     Found 16-bit register for signal <data>.
     Summary:
 	inferred  16 D-type flip-flop(s).
@@ -4760,7 +4811,7 @@ Unit <cmm_errman_cor> synthesized.
 
 Synthesizing Unit <cmm_errman_cnt_en>.
     Related source file is "pcie_cores/pcie_v5/source/cmm_errman_cnt_en.v".
-    Found 4-bit adder carry out for signal <AUX_134$addsub0000>.
+    Found 4-bit adder carry out for signal <AUX_133$addsub0000>.
     Found 4-bit register for signal <reg_cnt>.
     Found 4-bit register for signal <reg_count>.
     Found 1-bit register for signal <reg_extra>.
@@ -4774,7 +4825,7 @@ Unit <cmm_errman_cnt_en> synthesized.
 
 Synthesizing Unit <cmm_errman_ftl>.
     Related source file is "pcie_cores/pcie_v5/source/cmm_errman_ftl.v".
-    Found 64x4-bit ROM for signal <COND_137$rom0000>.
+    Found 64x4-bit ROM for signal <COND_136$rom0000>.
     Found 3-bit register for signal <reg_ftl_num>.
     Found 1-bit register for signal <reg_inc_dec_b>.
     Summary:
@@ -4785,7 +4836,7 @@ Unit <cmm_errman_ftl> synthesized.
 
 Synthesizing Unit <cmm_errman_cpl>.
     Related source file is "pcie_cores/pcie_v5/source/cmm_errman_cpl.v".
-    Found 4x4-bit ROM for signal <COND_138$rom0000>.
+    Found 4x4-bit ROM for signal <COND_137$rom0000>.
     Found 3-bit register for signal <reg_cpl_num>.
     Found 1-bit register for signal <reg_inc_dec_b>.
     Summary:
@@ -4861,13 +4912,18 @@ Unit <clk_ctrl> synthesized.
 
 
 Synthesizing Unit <fifo_wrap>.
-    Related source file is "../../XillyLBI/ver1/fifo_wrap.v".
+    Related source file is "../XillyLBI/ver1/fifo_wrap.v".
 Unit <fifo_wrap> synthesized.
 
 
 Synthesizing Unit <xilly_data_fifo_wrap>.
     Related source file is "xilly_data_fifo_wrap.v".
 Unit <xilly_data_fifo_wrap> synthesized.
+
+
+Synthesizing Unit <edg_det_wrap>.
+    Related source file is "edg_det_wrap.v".
+Unit <edg_det_wrap> synthesized.
 
 
 Synthesizing Unit <pcie_clocking>.
@@ -5856,7 +5912,7 @@ Macro Statistics
  7-bit subtractor                                      : 1
  8-bit subtractor                                      : 2
  9-bit adder                                           : 1
-# Counters                                             : 27
+# Counters                                             : 28
  10-bit down counter                                   : 1
  10-bit up counter                                     : 1
  10-bit updown counter                                 : 1
@@ -5865,6 +5921,7 @@ Macro Statistics
  16-bit up counter                                     : 2
  2-bit down counter                                    : 1
  2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
  4-bit down counter                                    : 1
  4-bit up counter                                      : 2
  4-bit updown counter                                  : 1
@@ -5899,8 +5956,9 @@ Macro Statistics
  9-bit register                                        : 3
 # Toggle Registers                                     : 1
  T flip-flop                                           : 1
-# Latches                                              : 1
+# Latches                                              : 2
  1-bit latch                                           : 1
+ 32-bit latch                                          : 1
 # Comparators                                          : 50
  10-bit comparator greater                             : 1
  10-bit comparator lessequal                           : 2
@@ -6074,11 +6132,18 @@ Optimizing FSM <XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/curr_state_l0/FSM> o
  01000 | 011
  10000 | 100
 -------------------
+Reading core <ipcore_dir/frame_counter.ngc>.
+Reading Secure Unit <blk00000001>.
 Reading core <ipcore_dir/ctr_fifo.ngc>.
 Reading core <ipcore_dir/xilly_data_fifo.ngc>.
+Reading core <edge_det/edge_det_cw.ngc>.
+Reading core <edge_det/xlpersistentdff.ngc>.
 Reading core <xillybus_core.ngc>.
+Loading core <frame_counter> for timing and area information for instance <XLXI_58>.
 Loading core <ctr_fifo> for timing and area information for instance <f1>.
 Loading core <xilly_data_fifo> for timing and area information for instance <xf1>.
+Loading core <xlpersistentdff> for timing and area information for instance <persistentdff_inst>.
+Loading core <edge_det_cw> for timing and area information for instance <ed1>.
 Loading core <xillybus_core> for timing and area information for instance <xillybus_core_ins>.
 INFO:Xst:2261 - The FF/Latch <dllp_ack_l4_rr> in Unit <prod_fixes_I> is equivalent to the following 15 FFs/Latches, which will be removed : <dllp_ack_l3_reverse_rr> <pipe_rx_data_k_out_1> <pipe_rx_data_k_out_2> <pipe_rx_data_k_out_3> <pipe_rx_data_k_out_4> <pipe_rx_data_k_out_5> <pipe_rx_data_k_out_6> <pipe_rx_data_k_out_7> <pipe_rx_valid_out_1> <pipe_rx_valid_out_2> <pipe_rx_valid_out_3> <pipe_rx_valid_out_4> <pipe_rx_valid_out_5> <pipe_rx_valid_out_6> <pipe_rx_valid_out_7> 
 INFO:Xst:2261 - The FF/Latch <pipe_rx_data_l2_out_0> in Unit <prod_fixes_I> is equivalent to the following 6 FFs/Latches, which will be removed : <pipe_rx_data_l2_out_2> <pipe_rx_data_l2_out_3> <pipe_rx_data_l2_out_4> <pipe_rx_data_l2_out_5> <pipe_rx_data_l2_out_6> <pipe_rx_data_l2_out_7> 
@@ -6721,7 +6786,7 @@ Macro Statistics
  6-bit adder                                           : 2
  7-bit subtractor                                      : 1
  8-bit subtractor                                      : 2
-# Counters                                             : 25
+# Counters                                             : 26
  10-bit down counter                                   : 1
  10-bit up counter                                     : 1
  10-bit updown counter                                 : 1
@@ -6729,6 +6794,7 @@ Macro Statistics
  16-bit up counter                                     : 2
  2-bit down counter                                    : 1
  2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
  4-bit down counter                                    : 1
  4-bit up counter                                      : 2
  4-bit updown counter                                  : 1
@@ -6742,8 +6808,9 @@ Macro Statistics
  12-bit up accumulator                                 : 2
 # Registers                                            : 3803
  Flip-Flops                                            : 3803
-# Latches                                              : 1
+# Latches                                              : 2
  1-bit latch                                           : 1
+ 32-bit latch                                          : 1
 # Shift Registers                                      : 72
  16-bit dynamic shift register                         : 72
 # Comparators                                          : 50
@@ -7030,6 +7097,8 @@ Optimizing unit <pcie_blk_ll_tx> ...
 
 Optimizing unit <pcie_blk_cf_mgmt> ...
 
+Optimizing unit <Header_RAM2> ...
+
 Optimizing unit <pcie_blk_ll_arb> ...
 WARNING:Xst:1293 - FF/Latch <trn_rcpl_streaming_n_reg> has a constant value of 1 in block <pcie_blk_ll_arb>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <last_completion> is unconnected in block <pcie_blk_ll_arb>.
@@ -7236,8 +7305,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ll_bridge/rx_bridge
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ll_bridge/rx_bridge/snk_inst/dsc_q_6> (without init value) has a constant value of 0 in block <XLXI_37/pcie/pcie_ep0/pcie_blk_if>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <XLXI_19/Header_Address_3> of sequential type is unconnected in block <xillyctr>.
 WARNING:Xst:2677 - Node <XLXI_19/Header_Address_2> of sequential type is unconnected in block <xillyctr>.
-WARNING:Xst:2677 - Node <XLXI_19/Header_Address_1> of sequential type is unconnected in block <xillyctr>.
-WARNING:Xst:2677 - Node <XLXI_19/Header_Address_0> of sequential type is unconnected in block <xillyctr>.
 WARNING:Xst:2677 - Node <XLXI_19/fr_cnt> of sequential type is unconnected in block <xillyctr>.
 WARNING:Xst:2677 - Node <cf_bridge/management_interface/cfg_data_en_d> of sequential type is unconnected in block <XLXI_37/pcie/pcie_ep0/pcie_blk_if>.
 WARNING:Xst:2677 - Node <cf_bridge/management_interface/cfg_rd_wr_done_n> of sequential type is unconnected in block <XLXI_37/pcie/pcie_ep0/pcie_blk_if>.
@@ -8038,8 +8105,8 @@ Unit <xillyctr> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2614
- Flip-Flops                                            : 2614
+# Registers                                            : 2648
+ Flip-Flops                                            : 2648
 # Shift Registers                                      : 76
  10-bit shift register                                 : 1
  2-bit shift register                                  : 4
@@ -8075,33 +8142,34 @@ Design Statistics
 # IOs                              : 16
 
 Cell Usage :
-# BELS                             : 6981
-#      GND                         : 6
-#      INV                         : 213
-#      LUT1                        : 379
-#      LUT2                        : 722
-#      LUT3                        : 520
-#      LUT4                        : 782
+# BELS                             : 7202
+#      GND                         : 7
+#      INV                         : 216
+#      LUT1                        : 410
+#      LUT2                        : 701
+#      LUT3                        : 575
+#      LUT4                        : 813
 #      LUT5                        : 730
-#      LUT6                        : 1631
-#      MUXCY                       : 1016
-#      MUXF7                       : 123
-#      VCC                         : 5
-#      XORCY                       : 854
-# FlipFlops/Latches                : 5525
-#      FD                          : 460
+#      LUT6                        : 1689
+#      MUXCY                       : 1047
+#      MUXF7                       : 122
+#      VCC                         : 6
+#      XORCY                       : 886
+# FlipFlops/Latches                : 5594
+#      FD                          : 461
 #      FDC                         : 277
 #      FDCE                        : 351
 #      FDCP                        : 8
-#      FDE                         : 2350
+#      FDE                         : 2383
 #      FDP                         : 34
 #      FDPE                        : 15
-#      FDR                         : 686
-#      FDRE                        : 1126
+#      FDR                         : 698
+#      FDRE                        : 1117
 #      FDRS                        : 17
 #      FDRSE                       : 3
-#      FDS                         : 29
-#      FDSE                        : 168
+#      FDS                         : 31
+#      FDSE                        : 166
+#      LD                          : 32
 #      LDP_1                       : 1
 # RAMS                             : 105
 #      RAM32M                      : 27
@@ -8113,8 +8181,8 @@ Cell Usage :
 #      RAMB36SDP_EXP               : 3
 # Shift Registers                  : 150
 #      SRLC16E                     : 150
-# Clock Buffers                    : 7
-#      BUFG                        : 7
+# Clock Buffers                    : 8
+#      BUFG                        : 8
 # IO Buffers                       : 15
 #      IBUF                        : 5
 #      IBUFDS                      : 1
@@ -8134,19 +8202,19 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            5525  out of  69120     7%  
- Number of Slice LUTs:                 5377  out of  69120     7%  
-    Number used as Logic:              4977  out of  69120     7%  
+ Number of Slice Registers:            5594  out of  69120     8%  
+ Number of Slice LUTs:                 5534  out of  69120     8%  
+    Number used as Logic:              5134  out of  69120     7%  
     Number used as Memory:              400  out of  17920     2%  
        Number used as RAM:              250
        Number used as SRL:              150
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   8034
-   Number with an unused Flip Flop:    2509  out of   8034    31%  
-   Number with an unused LUT:          2657  out of   8034    33%  
-   Number of fully used LUT-FF pairs:  2868  out of   8034    35%  
-   Number of unique control sets:       248
+ Number of LUT Flip Flop pairs used:   8193
+   Number with an unused Flip Flop:    2599  out of   8193    31%  
+   Number with an unused LUT:          2659  out of   8193    32%  
+   Number of fully used LUT-FF pairs:  2935  out of   8193    35%  
+   Number of unique control sets:       253
 
 IO Utilization: 
  Number of IOs:                          16
@@ -8155,7 +8223,7 @@ IO Utilization:
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               22  out of    148    14%  
     Number using Block RAM only:         22
- Number of BUFG/BUFGCTRLs:                7  out of     32    21%  
+ Number of BUFG/BUFGCTRLs:                8  out of     32    25%  
  Number of PLL_ADVs:                      2  out of      6    33%  
 
 ---------------------------
@@ -8179,8 +8247,9 @@ Clock Information:
 ------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
 Clock Signal                                                                                                                                    | Clock buffer(FF name)                                                    | Load  |
 ------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+-------+
-XLXI_37/pcie/pcie_ep0/pcie_blk/clocking_i/clkout1                                                                                               | BUFG                                                                     | 5476  |
+XLXI_37/pcie/pcie_ep0/pcie_blk/clocking_i/clkout1                                                                                               | BUFG                                                                     | 5545  |
 XLXI_1/CLKOUT0_BUF                                                                                                                              | BUFG                                                                     | 145   |
+XLXI_19/h_en1                                                                                                                                   | BUFG                                                                     | 32    |
 XLXI_37/pcie/pcie_ep0/pcie_blk/clocking_i/clkout0                                                                                               | BUFG                                                                     | 155   |
 XLXI_37/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/gt_refclk_out                                                                             | BUFG                                                                     | 18    |
 N0                                                                                                                                              | NONE(XLXI_37/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/GTD[0].GT_i)  | 1     |
@@ -8245,7 +8314,7 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 9.028ns (Maximum Frequency: 110.767MHz)
+   Minimum period: 5.430ns (Maximum Frequency: 184.166MHz)
    Minimum input arrival time before clock: 3.338ns
    Maximum output required time after clock: 3.352ns
    Maximum combinational path delay: 2.914ns
@@ -8256,28 +8325,41 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXI_37/pcie/pcie_ep0/pcie_blk/clocking_i/clkout1'
-  Clock period: 9.028ns (frequency: 110.767MHz)
-  Total number of paths / destination ports: 150935 / 13430
+  Clock period: 5.430ns (frequency: 184.166MHz)
+  Total number of paths / destination ports: 152286 / 13553
 -------------------------------------------------------------------------
-Delay:               4.514ns (Levels of Logic = 3)
-  Source:            XLXI_16/f1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (RAM)
-  Destination:       XLXI_22/xf1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (RAM)
+Delay:               5.430ns (Levels of Logic = 16)
+  Source:            XLXI_37/xillybus_core_ins/pcie_v5_request_ins/tlp_dissect/header1_14 (FF)
+  Destination:       XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/data_count_int_9 (FF)
   Source Clock:      XLXI_37/pcie/pcie_ep0/pcie_blk/clocking_i/clkout1 rising
-  Destination Clock: XLXI_37/pcie/pcie_ep0/pcie_blk/clocking_i/clkout1 falling
+  Destination Clock: XLXI_37/pcie/pcie_ep0/pcie_blk/clocking_i/clkout1 rising
 
-  Data Path: XLXI_16/f1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP to XLXI_22/xf1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+  Data Path: XLXI_37/xillybus_core_ins/pcie_v5_request_ins/tlp_dissect/header1_14 to XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/data_count_int_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB36_EXP:REGCLKBL->DOB0    1   2.190   0.973  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ram_doutb4<0>)
-     LUT6:I1->O            1   0.094   0.480  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/dout_mux<7>1 (dout<23>)
-     end scope: 'XLXI_16/f1'
-     LUT2:I1->O            2   0.094   0.341  XLXI_20/Data_Out<23>1 (XLXN_94<23>)
-     begin scope: 'XLXI_22/xf1'
-     RAMB36_EXP:DIA0           0.342          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v5_noinit.ram/SDP.SINGLE_PRIM36.TDP
+     FDRE:C->Q             1   0.471   0.789  pcie_v5_request_ins/tlp_dissect/header1_14 (pcie_v5_request_ins/tlp_dissect/header1[14])
+     LUT4:I0->O            1   0.094   0.480  pcie_recv_dma_ins/rcv_data_wren_cmpl1_SW0 (N473)
+     LUT6:I5->O           35   0.094   1.101  pcie_recv_dma_ins/rcv_data_wren_cmpl1 (pcie_recv_dma_ins/N91)
+     LUT5:I0->O           36   0.094   0.608  pcie_v5_request_ins/rx_bridge/trn_rdst_rdy_n1 (trn_rdst_rdy_n_w)
+     end scope: 'XLXI_37/xillybus_core_ins'
+     begin scope: 'XLXI_37/pcie/pcie_ep0/pcie_blk_if'
+     LUT6:I5->O           20   0.094   0.584  ll_bridge/rx_bridge/fifo_inst/oq_fifo/rd_en_fwft1_1 (ll_bridge/rx_bridge/fifo_inst/oq_fifo/rd_en_fwft1)
+     LUT4:I3->O            1   0.094   0.336  ll_bridge/rx_bridge/fifo_inst/oq_fifo/data_count_int_and00011 (ll_bridge/rx_bridge/fifo_inst/oq_fifo/data_count_int_not0003_inv)
+     MUXCY:CI->O           1   0.026   0.000  ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<0> (ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<1> (ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<2> (ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<3> (ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<4> (ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<5> (ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<6> (ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<7> (ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<7>)
+     MUXCY:CI->O           0   0.026   0.000  ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<8> (ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_cy<8>)
+     XORCY:CI->O           1   0.357   0.000  ll_bridge/rx_bridge/fifo_inst/oq_fifo/Mcount_data_count_int_xor<9> (ll_bridge/rx_bridge/fifo_inst/oq_fifo/Result<9>)
+     FDCE:D                   -0.018          ll_bridge/rx_bridge/fifo_inst/oq_fifo/data_count_int_9
     ----------------------------------------
-    Total                      4.514ns (2.720ns logic, 1.794ns route)
-                                       (60.3% logic, 39.7% route)
+    Total                      5.430ns (1.532ns logic, 3.898ns route)
+                                       (28.2% logic, 71.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXI_1/CLKOUT0_BUF'
@@ -8310,27 +8392,27 @@ Delay:               2.765ns (Levels of Logic = 8)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXI_37/pcie/pcie_ep0/pcie_blk/clocking_i/clkout0'
-  Clock period: 3.644ns (frequency: 274.424MHz)
-  Total number of paths / destination ports: 1244 / 556
+  Clock period: 3.571ns (frequency: 280.034MHz)
+  Total number of paths / destination ports: 1247 / 556
 -------------------------------------------------------------------------
-Delay:               3.644ns (Levels of Logic = 3)
+Delay:               3.571ns (Levels of Logic = 3)
   Source:            XLXI_37/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].rx_data_4 (FF)
-  Destination:       XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/pipe_rx_valid_out_0 (FF)
+  Destination:       XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/pipe_rx_data_l0_out_6 (FF)
   Source Clock:      XLXI_37/pcie/pcie_ep0/pcie_blk/clocking_i/clkout0 rising
   Destination Clock: XLXI_37/pcie/pcie_ep0/pcie_blk/clocking_i/clkout0 rising
 
-  Data Path: XLXI_37/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].rx_data_4 to XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/pipe_rx_valid_out_0
+  Data Path: XLXI_37/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].rx_data_4 to XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/pipe_rx_data_l0_out_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q               3   0.471   1.080  XLXI_37/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].rx_data_4 (XLXI_37/pcie/pcie_ep0/pcie_blk/pipe_rx_data<4>)
-     LUT6:I0->O            2   0.094   0.978  XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/dllp_ack_l0_and000011 (XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/N24)
-     LUT6:I1->O            9   0.094   0.833  XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/dllp_ack_l0_and00001 (XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/dllp_ack_l0)
-     LUT4:I0->O            1   0.094   0.000  XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/pipe_rx_valid_out_mux0000<0>1 (XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/pipe_rx_valid_out_mux0000<0>)
-     FD:D                     -0.018          XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/pipe_rx_valid_out_0
+     LUT6:I0->O            3   0.094   0.984  XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/dllp_ack_l0_and000011 (XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/N24)
+     LUT6:I1->O            9   0.094   0.754  XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/pipe_rx_data_l0_out_mux0000<6>11 (XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/N37)
+     LUT3:I0->O            1   0.094   0.000  XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/pipe_rx_data_l0_out_mux0000<7>1 (XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/pipe_rx_data_l0_out_mux0000<7>)
+     FDE:D                    -0.018          XLXI_37/pcie/pcie_ep0/pcie_blk/prod_fixes_I/pipe_rx_data_l0_out_0
     ----------------------------------------
-    Total                      3.644ns (0.753ns logic, 2.891ns route)
-                                       (20.7% logic, 79.3% route)
+    Total                      3.571ns (0.753ns logic, 2.818ns route)
+                                       (21.1% logic, 78.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'XLXI_37/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/gt_refclk_out'
@@ -8476,16 +8558,19 @@ Delay:               2.914ns (Levels of Logic = 1)
                                        (84.1% logic, 15.9% route)
 
 =========================================================================
+WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to XLXI_58.
+WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to XLXI_58.
+WARNING:Xst:616 - Invalid property "BLACK_BOX 1": Did not attach to XLXI_60/ed1.
 
 
-Total REAL time to Xst completion: 211.00 secs
-Total CPU time to Xst completion: 210.28 secs
+Total REAL time to Xst completion: 231.00 secs
+Total CPU time to Xst completion: 230.38 secs
  
 --> 
 
-Total memory usage is 522564 kilobytes
+Total memory usage is 529348 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 2024 (   0 filtered)
-Number of infos    :  142 (   0 filtered)
+Number of warnings : 2032 (   0 filtered)
+Number of infos    :  143 (   0 filtered)
 

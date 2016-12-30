@@ -10,20 +10,20 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Tue Dec 27 13:13:37 2016
+Mapped Date    : Thu Dec 29 19:23:30 2016
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:   56
 Slice Logic Utilization:
-  Number of Slice Registers:                 5,283 out of  69,120    7%
-    Number used as Flip Flops:               5,282
-    Number used as Latches:                      1
-  Number of Slice LUTs:                      4,834 out of  69,120    6%
-    Number used as logic:                    4,418 out of  69,120    6%
-      Number using O6 output only:           3,426
-      Number using O5 output only:             346
+  Number of Slice Registers:                 5,382 out of  69,120    7%
+    Number used as Flip Flops:               5,349
+    Number used as Latches:                     33
+  Number of Slice LUTs:                      5,017 out of  69,120    7%
+    Number used as logic:                    4,598 out of  69,120    6%
+      Number using O6 output only:           3,546
+      Number using O5 output only:             406
       Number using O5 and O6:                  646
     Number used as Memory:                     383 out of  17,920    2%
       Number used as Dual Port RAM:            237
@@ -32,20 +32,21 @@ Slice Logic Utilization:
         Number using O5 and O6:                119
       Number used as Shift Register:           146
         Number using O6 output only:           146
-    Number used as exclusive route-thru:        33
-  Number of route-thrus:                       384
-    Number using O6 output only:               379
-    Number using O5 output only:                 5
+    Number used as exclusive route-thru:        36
+  Number of route-thrus:                       450
+    Number using O6 output only:               439
+    Number using O5 output only:                 9
+    Number using O5 and O6:                      2
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 2,337 out of  17,280   13%
-  Number of LUT Flip Flop pairs used:        6,941
-    Number with an unused Flip Flop:         1,658 out of   6,941   23%
-    Number with an unused LUT:               2,107 out of   6,941   30%
-    Number of fully used LUT-FF pairs:       3,176 out of   6,941   45%
-    Number of unique control sets:             244
+  Number of occupied Slices:                 2,346 out of  17,280   13%
+  Number of LUT Flip Flop pairs used:        7,089
+    Number with an unused Flip Flop:         1,707 out of   7,089   24%
+    Number with an unused LUT:               2,072 out of   7,089   29%
+    Number of fully used LUT-FF pairs:       3,310 out of   7,089   46%
+    Number of unique control sets:             246
     Number of slice register sites lost
-      to control set restrictions:             347 out of  69,120    1%
+      to control set restrictions:             348 out of  69,120    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -69,8 +70,8 @@ Specific Feature Utilization:
       Number of 36k BlockRAM used:              21
       Number of 18k BlockRAM used:               2
     Total Memory used (KB):                    792 out of   5,328   14%
-  Number of BUFG/BUFGCTRLs:                      4 out of      32   12%
-    Number used as BUFGs:                        4
+  Number of BUFG/BUFGCTRLs:                      5 out of      32   15%
+    Number used as BUFGs:                        5
   Number of BUFDSs:                              1 out of       8   12%
   Number of GTP_DUALs:                           1 out of       8   12%
     Number of LOCed GTP_DUALs:                   1 out of       1  100%
@@ -79,9 +80,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.74
 
-Peak Memory Usage:  733 MB
-Total REAL time to MAP completion:  5 mins 36 secs 
-Total CPU time to MAP completion:   5 mins 33 secs 
+Peak Memory Usage:  742 MB
+Total REAL time to MAP completion:  6 mins 
+Total CPU time to MAP completion:   5 mins 50 secs 
 
 Table of Contents
 -----------------
@@ -552,9 +553,9 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
- 349 block(s) removed
-  59 block(s) optimized away
- 428 signal(s) removed
+ 369 block(s) removed
+  62 block(s) optimized away
+ 448 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -864,86 +865,96 @@ The signal "XLXI_37/trn_rbar_hit_n<0>" is loadless and has been removed.
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_0"
 (SFF) removed.
     The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<0>" is loadless and has been removed.
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_0_
+rstpot" is loadless and has been removed.
      Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<0>" (ROM) removed.
-      The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
-stage<67>" is loadless and has been removed.
-       Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
-stage_67" (FF) removed.
-        The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/bram_st
-yle_fifo_dout_reg<67>" is loadless and has been removed.
-      The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
-stage<64>" is loadless and has been removed.
-       Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
-stage_64" (FF) removed.
-        The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/bram_st
-yle_fifo_dout_reg<64>" is loadless and has been removed.
-      The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
-stage<65>" is loadless and has been removed.
-       Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
-stage_65" (FF) removed.
-        The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/bram_st
-yle_fifo_dout_reg<65>" is loadless and has been removed.
-      The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
-stage<66>" is loadless and has been removed.
-       Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
-stage_66" (FF) removed.
-        The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/bram_st
-yle_fifo_dout_reg<66>" is loadless and has been removed.
-      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N353" is loadless and has been
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_0_
+rstpot" (ROM) removed.
+      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N594" is loadless and has been
 removed.
        Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<0>_SW0" (ROM) removed.
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rsof_not000
+11_SW13" (ROM) removed.
         The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/output_
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
 stage<67>" is loadless and has been removed.
          Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/output_
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
 stage_67" (FF) removed.
           The signal
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/bram_st
+yle_fifo_dout_reg<67>" is loadless and has been removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N563" is loadless and has been
+removed.
+         Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
+x0000<0>_SW1" (ROM) removed.
+          The signal
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
+stage<66>" is loadless and has been removed.
+           Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
+stage_66" (FF) removed.
+            The signal
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/bram_st
+yle_fifo_dout_reg<66>" is loadless and has been removed.
+          The signal
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
+stage<65>" is loadless and has been removed.
+           Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
+stage_65" (FF) removed.
+            The signal
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/bram_st
+yle_fifo_dout_reg<65>" is loadless and has been removed.
+          The signal
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
+stage<64>" is loadless and has been removed.
+           Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/output_
+stage_64" (FF) removed.
+            The signal
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/oq_fifo/bram_st
+yle_fifo_dout_reg<64>" is loadless and has been removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N353" is loadless and has been
+removed.
+         Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
+x0000<0>_SW0" (ROM) removed.
+          The signal
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/output_
+stage<67>" is loadless and has been removed.
+           Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/output_
+stage_67" (FF) removed.
+            The signal
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/dout_in
 t<67>" is loadless and has been removed.
-        The signal
+          The signal
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/output_
 stage<64>" is loadless and has been removed.
-         Loadless block
+           Loadless block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/output_
 stage_64" (FF) removed.
-          The signal
+            The signal
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/dout_in
 t<64>" is loadless and has been removed.
-        The signal
+          The signal
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/output_
 stage<66>" is loadless and has been removed.
-         Loadless block
+           Loadless block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/output_
 stage_66" (FF) removed.
-          The signal
+            The signal
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/dout_in
 t<66>" is loadless and has been removed.
-        The signal
+          The signal
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/output_
 stage<65>" is loadless and has been removed.
-         Loadless block
+           Loadless block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/output_
 stage_65" (FF) removed.
-          The signal
+            The signal
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/bq_fifo/dout_in
 t<65>" is loadless and has been removed.
 The signal "XLXI_37/trn_rbar_hit_n<1>" is loadless and has been removed.
@@ -957,14 +968,24 @@ The signal "XLXI_37/trn_rbar_hit_n<1>" is loadless and has been removed.
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_1"
 (SFF) removed.
     The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<1>" is loadless and has been removed.
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_1_
+rstpot" is loadless and has been removed.
      Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<1>" (ROM) removed.
-      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N357" is loadless and has been
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_1_
+rstpot" (ROM) removed.
+      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N592" is loadless and has been
 removed.
        Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rsof_not000
+11_SW12" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N561" is loadless and has been
+removed.
+         Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
+x0000<1>_SW1" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N357" is loadless and has been
+removed.
+         Loadless block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
 x0000<1>_SW0" (ROM) removed.
 The signal "XLXI_37/trn_rbar_hit_n<2>" is loadless and has been removed.
@@ -978,14 +999,24 @@ The signal "XLXI_37/trn_rbar_hit_n<2>" is loadless and has been removed.
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_2"
 (SFF) removed.
     The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<2>" is loadless and has been removed.
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_2_
+rstpot" is loadless and has been removed.
      Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<2>" (ROM) removed.
-      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N347" is loadless and has been
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_2_
+rstpot" (ROM) removed.
+      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N590" is loadless and has been
 removed.
        Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rsof_not000
+11_SW11" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N559" is loadless and has been
+removed.
+         Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
+x0000<2>_SW1" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N347" is loadless and has been
+removed.
+         Loadless block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
 x0000<2>_SW0" (ROM) removed.
 The signal "XLXI_37/trn_rbar_hit_n<3>" is loadless and has been removed.
@@ -999,14 +1030,24 @@ The signal "XLXI_37/trn_rbar_hit_n<3>" is loadless and has been removed.
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_3"
 (SFF) removed.
     The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<3>" is loadless and has been removed.
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_3_
+rstpot" is loadless and has been removed.
      Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<3>" (ROM) removed.
-      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N355" is loadless and has been
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_3_
+rstpot" (ROM) removed.
+      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N588" is loadless and has been
 removed.
        Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rsof_not000
+11_SW10" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N557" is loadless and has been
+removed.
+         Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
+x0000<3>_SW1" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N355" is loadless and has been
+removed.
+         Loadless block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
 x0000<3>_SW0" (ROM) removed.
 The signal "XLXI_37/trn_rbar_hit_n<4>" is loadless and has been removed.
@@ -1020,14 +1061,24 @@ The signal "XLXI_37/trn_rbar_hit_n<4>" is loadless and has been removed.
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_4"
 (SFF) removed.
     The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<4>" is loadless and has been removed.
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_4_
+rstpot" is loadless and has been removed.
      Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<4>" (ROM) removed.
-      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N351" is loadless and has been
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_4_
+rstpot" (ROM) removed.
+      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N586" is loadless and has been
 removed.
        Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rsof_not000
+11_SW9" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N555" is loadless and has been
+removed.
+         Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
+x0000<4>_SW1" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N351" is loadless and has been
+removed.
+         Loadless block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
 x0000<4>_SW0" (ROM) removed.
 The signal "XLXI_37/trn_rbar_hit_n<5>" is loadless and has been removed.
@@ -1041,14 +1092,24 @@ The signal "XLXI_37/trn_rbar_hit_n<5>" is loadless and has been removed.
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_5"
 (SFF) removed.
     The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<5>" is loadless and has been removed.
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_5_
+rstpot" is loadless and has been removed.
      Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<5>" (ROM) removed.
-      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N349" is loadless and has been
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_5_
+rstpot" (ROM) removed.
+      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N584" is loadless and has been
 removed.
        Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rsof_not000
+11_SW8" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N553" is loadless and has been
+removed.
+         Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
+x0000<5>_SW1" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N349" is loadless and has been
+removed.
+         Loadless block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
 x0000<5>_SW0" (ROM) removed.
 The signal "XLXI_37/trn_rbar_hit_n<6>" is loadless and has been removed.
@@ -1062,14 +1123,24 @@ The signal "XLXI_37/trn_rbar_hit_n<6>" is loadless and has been removed.
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_6"
 (SFF) removed.
     The signal
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<6>" is loadless and has been removed.
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_6_
+rstpot" is loadless and has been removed.
      Loadless block
-"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
-x0000<6>" (ROM) removed.
-      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N345" is loadless and has been
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_6_
+rstpot" (ROM) removed.
+      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N582" is loadless and has been
 removed.
        Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rsof_not000
+11_SW7" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N551" is loadless and has been
+removed.
+         Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
+x0000<6>_SW1" (ROM) removed.
+        The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N345" is loadless and has been
+removed.
+         Loadless block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rbar_hit_mu
 x0000<6>_SW0" (ROM) removed.
 The signal "XLXI_37/trn_reof_n" is loadless and has been removed.
@@ -1086,6 +1157,22 @@ loadless and has been removed.
    Loadless block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rrem_4"
 (SFF) removed.
+    The signal
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rrem_4_rstp
+ot" is loadless and has been removed.
+     Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rrem_4_rstp
+ot" (MUX) removed.
+      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N874" is loadless and has been
+removed.
+       Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rrem_4_rstp
+ot_F" (ROM) removed.
+      The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N875" is loadless and has been
+removed.
+       Loadless block
+"XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/fifo_inst/trn_rrem_4_rstp
+ot_G" (ROM) removed.
 The signal
 "XLXI_16/f1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/g
 ras.rsts/ram_empty_i" is loadless and has been removed.
@@ -2003,6 +2090,12 @@ Loadless block
 Loadless block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/cf_bridge/management_interface/lut_cfgdw_rom6
 " (ROM) removed.
+Loadless block
+"XLXI_60/ed1/default_clock_driver_edge_det_x0/xlclockdriver_1/clr_reg/has_latenc
+y.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp" (SFF) removed.
+ The signal "XLXI_60/ed1/N1" is loadless and has been removed.
+ The signal "XLXI_60/ed1/N0" is loadless and has been removed.
+  Loadless block "XLXI_60/ed1/XST_GND" (ZERO) removed.
 
 The trimmed logic reported below is either:
    1. part of a cycle
@@ -2163,7 +2256,7 @@ cntr_p1_cy<2>_rt" (ROM) removed.
    Unused block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/ll_credit/rx_ch_credits_received_2"
 (SFF) removed.
-The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N532" is unused and has been
+The signal "XLXI_37/pcie/pcie_ep0/pcie_blk_if/N601" is unused and has been
 removed.
  Unused block
 "XLXI_37/pcie/pcie_ep0/pcie_blk_if/ll_bridge/rx_bridge/arb_inst/completion_avail
@@ -2315,6 +2408,8 @@ C" is unused and has been removed.
 The signal
 "XLXI_37/pcie/pcie_ep0/pcie_blk/SIO/.pcie_gt_wrapper_i/flop[0].tx_elec_idle/VCC"
 is unused and has been removed.
+The signal "XLXI_60/ed1/persistentdff_inst_q" is unused and has been removed.
+ Unused block "XLXI_60/ed1/persistentdff_inst/q" (FF) removed.
 The signal "XLXI_37/xillybus_core_ins/user_r_mem_8_rden_w" is unused and has
 been removed.
  Unused block "XLXI_37/xillybus_core_ins/unitw_2_ins/user_r_mem_8_rden1" (ROM)
@@ -2491,6 +2586,9 @@ FD 		XLXI_37/xillybus_core_ins/unitw_2_ins/unitw_2_data_8
    optimized to 0
 FD 		XLXI_37/xillybus_core_ins/unitw_2_ins/unitw_2_data_9
    optimized to 0
+GND 		XLXI_58/blk00000001/blk00000002
+VCC 		XLXI_58/blk00000001/blk00000003
+VCC 		XLXI_60/ed1/XST_VCC
 GND 		XST_GND
 VCC 		XST_VCC
 GND 		XLXI_37/xillybus_core_ins/msg_buf_ins/XST_GND

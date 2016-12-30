@@ -1,0 +1,12 @@
+[Inputs]
+rd_en
+rd_clk
+=Address[3:0]=
+=frame_count[31:0]=
+=pps_count[31:0]=
+[Outputs]
+=data_out[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Header_RAM2
+

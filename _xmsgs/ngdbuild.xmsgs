@@ -16,5 +16,8 @@
 <msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;NET &quot;pcie_ref_clk&quot;  PERIOD = 10ns;&gt; [top.ucf(24)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
 </msg>
 
+<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_60/ed1/default_clock_driver_edge_det_x0/xlclockdriver_1/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp</arg>&apos; has unconnected output pin
+</msg>
+
 </messages>
 

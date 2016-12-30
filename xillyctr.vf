@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.5
 //  \   \         Application : sch2hdl
 //  /   /         Filename : xillyctr.vf
-// /___/   /\     Timestamp : 12/27/2016 13:09:27
+// /___/   /\     Timestamp : 12/29/2016 19:18:27
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -sympath E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir -sympath E:/xillycounter/ipcore_dir -intstyle ise -family virtex5 -verilog E:/xillyFIFO_test/xillyFIFO_test/xillyctr.vf -w E:/xillyFIFO_test/xillyFIFO_test/xillyctr.sch
+//Command: sch2hdl -sympath E:/xillyFIFO_test2-master/ipcore_dir -intstyle ise -family virtex5 -verilog E:/xillyFIFO_test2-master/xillyctr.vf -w E:/xillyFIFO_test2-master/xillyctr.sch
 //Design Name: xillyctr
 //Device: virtex5
 //Purpose:
@@ -56,14 +56,19 @@ module xillyctr(clk,
    wire XLXN_13;
    wire XLXN_18;
    wire XLXN_19;
-   wire XLXN_26;
    wire [31:0] XLXN_29;
    wire [31:0] XLXN_94;
-   wire XLXN_96;
    wire XLXN_97;
    wire [31:0] XLXN_98;
    wire XLXN_99;
-   wire XLXN_101;
+   wire [31:0] XLXN_115;
+   wire XLXN_117;
+   wire [31:0] XLXN_128;
+   wire [3:0] XLXN_136;
+   wire XLXN_159;
+   wire [31:0] XLXN_160;
+   wire XLXN_161;
+   wire XLXN_164;
    wire locked_DUMMY;
    
    assign locked = locked_DUMMY;
@@ -92,20 +97,20 @@ module xillyctr(clk,
                       .prog_full(XLXN_19));
    Ctrl  XLXI_19 (.clk(busclk), 
                  .prg_full(XLXN_19), 
-                 .en(XLXN_96), 
+                 .en(XLXN_164), 
                  .fifo_rd(XLXN_18), 
                  .fr_cnt(), 
-                 .Header_Address(), 
-                 .h_en(XLXN_26));
+                 .Header_Address(XLXN_136[3:0]), 
+                 .h_en(XLXN_117));
    Mux_8_bit  XLXI_20 (.Fifo_Data(XLXN_29[31:0]), 
-                      .Header_data(), 
-                      .Sel(XLXN_26), 
+                      .Header_data(XLXN_115[31:0]), 
+                      .Sel(XLXN_117), 
                       .Data_Out(XLXN_94[31:0]));
-   xilly_data_fifo_wrap  XLXI_22 (.clk(XLXN_101), 
+   xilly_data_fifo_wrap  XLXI_22 (.clk(busclk), 
                                  .din(XLXN_94[31:0]), 
                                  .rd_en(XLXN_99), 
                                  .rst(xilly_fifo_rst), 
-                                 .wr_en(XLXN_96), 
+                                 .wr_en(XLXN_164), 
                                  .dout(XLXN_98[31:0]), 
                                  .empty(XLXN_97), 
                                  .full());
@@ -136,6 +141,22 @@ module xillyctr(clk,
                      .user_w_mem_8_data(), 
                      .user_w_mem_8_open(), 
                      .user_w_mem_8_wren());
-   INV  XLXI_39 (.I(busclk), 
-                .O(XLXN_101));
+   fr_ctr  XLXI_51 (.clk(busclk), 
+                   .en(XLXN_161), 
+                   .val(XLXN_128[31:0]));
+   INV  XLXI_55 (.I(busclk), 
+                .O(XLXN_159));
+   Header_RAM2  XLXI_56 (.Address(XLXN_136[3:0]), 
+                        .frame_count(XLXN_128[31:0]), 
+                        .pps_count(XLXN_160[31:0]), 
+                        .rd_clk(XLXN_159), 
+                        .rd_en(XLXN_117), 
+                        .data_out(XLXN_115[31:0]));
+   frame_counter  XLXI_58 (.ce(XLXN_161), 
+                          .clk(XLXN_159), 
+                          .q(XLXN_160[31:0]));
+   edg_det_wrap  XLXI_60 (.ce(locked_DUMMY), 
+                         .clk(busclk), 
+                         .in_x0(XLXN_164), 
+                         .out_x0(XLXN_161));
 endmodule

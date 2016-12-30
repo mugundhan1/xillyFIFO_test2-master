@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/edge_det/edge_det_cw.xst" -ofn "E:/xillyFIFO_test2-master/edge_det/edge_det_cw.syr" 

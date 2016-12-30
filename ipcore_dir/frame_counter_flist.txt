@@ -1,0 +1,17 @@
+# Output products list for <frame_counter>
+_xmsgs\pn_parser.xmsgs
+core_resources.txt
+frame_counter.asy
+frame_counter.gise
+frame_counter.ngc
+frame_counter.sym
+frame_counter.v
+frame_counter.veo
+frame_counter.xco
+frame_counter.xise
+frame_counter\doc\c_counter_binary_v11_0_readme.txt
+frame_counter\doc\c_counter_binary_v11_0_vinfo.html
+frame_counter\doc\ds215_counter.pdf
+frame_counter_flist.txt
+frame_counter_xmdf.tcl
+gui_latency.txt

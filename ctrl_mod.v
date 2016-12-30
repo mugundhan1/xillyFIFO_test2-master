@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Ctrl(input clk,prg_full,
 output reg h_en=0,fifo_rd=0,fr_cnt=0,
-output reg [1:0]Header_Address=0,
+output reg [3:0]Header_Address=0,
 output reg en=0
     );
 parameter m=4;

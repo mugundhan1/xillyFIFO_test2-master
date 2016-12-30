@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-12-28T07:55:34</DateModified>
+  <DateModified>2016-12-29T19:18:17</DateModified>
   <ModuleName>xillyctr</ModuleName>
-  <SummaryTimeStamp>2016-12-27T13:26:09</SummaryTimeStamp>
-  <SavedFilePath>/media/Mordor/xillyFIFO_test2-master/iseconfig/xillyctr.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/media/Mordor/xillyFIFO_test2-master/</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2016-12-29T12:52:05</SummaryTimeStamp>
+  <SavedFilePath>E:/xillyFIFO_test2-master/iseconfig/xillyctr.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>E:/xillyFIFO_test2-master\</ImplementationReportsDirectory>
   <DateInitialized>2016-12-21T10:52:13</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
   <XMP_File/>

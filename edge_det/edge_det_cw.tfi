@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+edge_det_cw instance_name (
+    .clk(clk), 
+    .ce(ce), 
+    .in_x0(in_x0), 
+    .out_x0(out_x0)
+    );
+
+

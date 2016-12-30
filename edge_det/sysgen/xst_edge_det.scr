@@ -1,0 +1,1 @@
+run -ifn xst_edge_det.prj -ifmt mixed -ofn edge_det_cw.ngc -ofmt NGC -p xc5vlx110t-1ff1136 -ent edge_det_cw -keep_hierarchy NO -iobuf YES -bus_delimiter [] -top edge_det_cw -hierarchy_separator / -report_timing_constraint_problems warning -register_balancing no -iob Auto -uc edge_det_cw.xcf -write_timing_constraints yes

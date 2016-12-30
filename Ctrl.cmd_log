@@ -4,3 +4,17 @@ vhdtdtfi -lib work /media/Mordor/xillycounter-master/ctrl_mod.v -lang verilog -p
 spl2sym -intstyle ise -family virtex5 -w Ctrl.spl /media/Mordor/xillycounter-master/Ctrl.sym 
 vhdtdtfi -lib work /media/Mordor/xillyFIFO_test2-master/ctrl_mod.v -lang verilog -prj xillycounter -o Ctrl.spl -module Ctrl -template /media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
 spl2sym -intstyle ise -family virtex5 -w Ctrl.spl /media/Mordor/xillyFIFO_test2-master/Ctrl.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/ctrl_mod.v -lang verilog -prj xillycounter -o Ctrl.spl -module Ctrl -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Ctrl.spl E:/xillyFIFO_test2-master/Ctrl.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/ctrl_mod.v -lang verilog -prj xillycounter -o Ctrl.spl -module Ctrl -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Ctrl.spl E:/xillyFIFO_test2-master/Ctrl.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/ctrl_mod.v -lang verilog -prj xillycounter -o Ctrl.spl -module Ctrl -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Ctrl.spl E:/xillyFIFO_test2-master/Ctrl.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/ctrl_mod.v -lang verilog -prj xillycounter -o Ctrl.spl -module Ctrl -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Ctrl.spl E:/xillyFIFO_test2-master/Ctrl.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/ctrl_mod.v -lang verilog -prj xillycounter -o Ctrl.spl -module Ctrl -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Ctrl.spl E:/xillyFIFO_test2-master/Ctrl.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/ctrl_mod.v -lang verilog -prj xillycounter -o Ctrl.spl -module Ctrl -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Ctrl.spl E:/xillyFIFO_test2-master/Ctrl.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/ctrl_mod.v -lang verilog -prj xillycounter -o Ctrl.spl -module Ctrl -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Ctrl.spl E:/xillyFIFO_test2-master/Ctrl.sym 

@@ -1,0 +1,521 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> 
+Reading constraint file E:/xillyFIFO_test2-master/edge_det/edge_det_cw.xcf.
+XCF parsing done.
+Reading design: edge_det_cw.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "edge_det_cw.prj"
+Input Format                       : mixed
+Synthesis Constraint File          : "E:/xillyFIFO_test2-master/edge_det/edge_det_cw.xcf"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "edge_det_cw"
+Output Format                      : NGC
+Target Device                      : xc5vlx110t-1-ff1136
+
+---- Source Options
+Top Module Name                    : edge_det_cw
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : NO
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : NO
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : []
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "edge_det.v" in library work
+Module <srl17e> compiled
+Module <synth_reg> compiled
+Module <synth_reg_reg> compiled
+Module <synth_reg_w_init> compiled
+Module <single_reg_w_init> compiled
+Module <cast> compiled
+Module <shift_division_result> compiled
+Module <shift_op> compiled
+Module <pad_lsb> compiled
+Module <zero_ext> compiled
+Module <sign_ext> compiled
+Module <extend_msb> compiled
+Module <align_input> compiled
+Module <round_towards_inf> compiled
+Module <round_towards_even> compiled
+Module <trunc> compiled
+Module <saturation_arith> compiled
+Module <wrap_arith> compiled
+Module <convert_type> compiled
+Module <delay_211dcce0ef> compiled
+Module <inverter_33a63b558a> compiled
+Module <logical_93c610aa63> compiled
+Module <edge_detect_module_7f18019072> compiled
+Compiling verilog file "edge_det_cw.v" in library work
+Module <edge_det> compiled
+Module <xlclockdriver> compiled
+Module <default_clock_driver_edge_det> compiled
+Module <edge_det_cw> compiled
+Module <xlpersistentdff> compiled
+No errors in compilation
+Analysis of file <"edge_det_cw.prj"> succeeded.
+ 
+
+Reading constraint file E:/xillyFIFO_test2-master/edge_det/edge_det_cw.xcf.
+XCF parsing done.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <edge_det_cw> in library <work>.
+
+Analyzing hierarchy for module <default_clock_driver_edge_det> in library <work>.
+
+Analyzing hierarchy for module <edge_det> in library <work>.
+
+Analyzing hierarchy for module <xlclockdriver> in library <work> with parameters.
+	clk_for_ce_pulse_minus1 = "0"
+	clk_for_ce_pulse_minus2 = "0"
+	clk_for_ce_pulse_minus_regs = "0"
+	cnt_width = "00000000000000000000000000000001"
+	factor = "00000000000000000000000000000101"
+	log_2_period = "00000000000000000000000000000001"
+	max_pipeline_regs = "00000000000000000000000000001000"
+	num_pipeline_regs = "00000000000000000000000000000101"
+	period = "00000000000000000000000000000001"
+	period_floor = "00000000000000000000000000000010"
+	pipeline_regs = "00000000000000000000000000000101"
+	power_of_2_counter = "00000000000000000000000000000001"
+	rem_pipeline_regs = "00000000000000000000000000000001"
+	trunc_period = "1"
+	use_bufg = "00000000000000000000000000000000"
+
+Analyzing hierarchy for module <edge_detect_module_7f18019072> in library <work>.
+
+Analyzing hierarchy for module <synth_reg_w_init> in library <work> with parameters.
+	init_index = "00000000000000000000000000000000"
+	init_value = "0"
+	latency = "00000000000000000000000000000001"
+	width = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <delay_211dcce0ef> in library <work> with parameters.
+	const_value = "1"
+
+Analyzing hierarchy for module <logical_93c610aa63> in library <work>.
+
+Analyzing hierarchy for module <inverter_33a63b558a> in library <work> with parameters.
+	const_value = "1"
+
+Analyzing hierarchy for module <single_reg_w_init> in library <work> with parameters.
+	init_const = "0"
+	init_index = "00000000000000000000000000000000"
+	init_index_val = "0"
+	init_value = "0"
+	result = "0"
+	width = "00000000000000000000000000000001"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <edge_det_cw>.
+WARNING:Xst:2211 - "edge_det_cw.v" line 381: Instantiating black box module <xlpersistentdff>.
+Module <edge_det_cw> is correct for synthesis.
+ 
+    Set property "syn_keep = true" for signal <persistentdff_inst_q>.
+    Set user-defined property "KEEP =  true" for signal <persistentdff_inst_q> (previous value was "KEEP soft").
+WARNING:Xst:37 - Detected unknown constraint/property "preserve_signal". This constraint/property is not supported by the current software release and will be ignored.
+    Set property "syn_keep = 1" for signal <persistentdff_inst_q>.
+    Set user-defined property "KEEP =  1" for signal <persistentdff_inst_q> (previous value was "KEEP soft").
+WARNING:Xst:37 - Detected unknown constraint/property "preserve_signal". This constraint/property is not supported by the current software release and will be ignored.
+    Set property "MAX_FANOUT = REDUCE" for signal <ce_1_sg_x1>.
+Analyzing module <default_clock_driver_edge_det> in library <work>.
+Module <default_clock_driver_edge_det> is correct for synthesis.
+ 
+WARNING:Xst:37 - Detected unknown constraint/property "DONT_TOUCH". This constraint/property is not supported by the current software release and will be ignored.
+    Set property "OPTIMIZE_PRIMITIVES = false" for unit <default_clock_driver_edge_det>.
+    Set property "SYN_NOPRUNE = true" for unit <default_clock_driver_edge_det>.
+Analyzing module <xlclockdriver> in library <work>.
+	clk_for_ce_pulse_minus1 = 1'b0
+	clk_for_ce_pulse_minus2 = 1'b0
+	clk_for_ce_pulse_minus_regs = 1'b0
+	cnt_width = 32'sb00000000000000000000000000000001
+	factor = 32'sb00000000000000000000000000000101
+	log_2_period = 32'sb00000000000000000000000000000001
+	max_pipeline_regs = 32'sb00000000000000000000000000001000
+	num_pipeline_regs = 32'sb00000000000000000000000000000101
+	period = 32'sb00000000000000000000000000000001
+	period_floor = 32'sb00000000000000000000000000000010
+	pipeline_regs = 32'sb00000000000000000000000000000101
+	power_of_2_counter = 32'sb00000000000000000000000000000001
+	rem_pipeline_regs = 32'sb00000000000000000000000000000001
+	trunc_period = 1'b1
+	use_bufg = 32'sb00000000000000000000000000000000
+Module <xlclockdriver> is correct for synthesis.
+ 
+    Set property "MAX_FANOUT = REDUCE" for signal <ce_vec_logic>.
+    Set property "MAX_FANOUT = REDUCE" for signal <ce_vec>.
+Analyzing module <synth_reg_w_init> in library <work>.
+	init_index = 32'sb00000000000000000000000000000000
+	init_value = 1'b0
+	latency = 32'sb00000000000000000000000000000001
+	width = 32'sb00000000000000000000000000000001
+Module <synth_reg_w_init> is correct for synthesis.
+ 
+Analyzing module <single_reg_w_init> in library <work>.
+	init_const = 1'b0
+	init_index = 32'sb00000000000000000000000000000000
+	init_index_val = 1'b0
+	init_value = 1'b0
+	result = 1'b0
+	width = 32'sb00000000000000000000000000000001
+Module <single_reg_w_init> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <fd_prim_array[0].rst_comp.fdre_comp> in unit <single_reg_w_init>.
+Analyzing module <edge_det> in library <work>.
+Module <edge_det> is correct for synthesis.
+ 
+Analyzing module <edge_detect_module_7f18019072> in library <work>.
+Module <edge_detect_module_7f18019072> is correct for synthesis.
+ 
+Analyzing module <delay_211dcce0ef> in library <work>.
+	const_value = 1'b1
+Module <delay_211dcce0ef> is correct for synthesis.
+ 
+Analyzing module <logical_93c610aa63> in library <work>.
+Module <logical_93c610aa63> is correct for synthesis.
+ 
+Analyzing module <inverter_33a63b558a> in library <work>.
+	const_value = 1'b1
+Module <inverter_33a63b558a> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <delay_211dcce0ef>.
+    Related source file is "edge_det.v".
+WARNING:Xst:647 - Input <clr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <proc_op_mem_20_24/i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <op_mem_20_24<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <delay_211dcce0ef> synthesized.
+
+
+Synthesizing Unit <logical_93c610aa63>.
+    Related source file is "edge_det.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <logical_93c610aa63> synthesized.
+
+
+Synthesizing Unit <inverter_33a63b558a>.
+    Related source file is "edge_det.v".
+WARNING:Xst:647 - Input <clr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <proc_op_mem_22_20/i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <op_mem_22_20_front_din> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <op_mem_22_20_back> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <inverter_33a63b558a> synthesized.
+
+
+Synthesizing Unit <single_reg_w_init>.
+    Related source file is "edge_det.v".
+Unit <single_reg_w_init> synthesized.
+
+
+Synthesizing Unit <edge_detect_module_7f18019072>.
+    Related source file is "edge_det.v".
+Unit <edge_detect_module_7f18019072> synthesized.
+
+
+Synthesizing Unit <edge_det>.
+    Related source file is "edge_det.v".
+Unit <edge_det> synthesized.
+
+
+Synthesizing Unit <synth_reg_w_init>.
+    Related source file is "edge_det.v".
+Unit <synth_reg_w_init> synthesized.
+
+
+Synthesizing Unit <xlclockdriver>.
+    Related source file is "edge_det_cw.v".
+WARNING:Xst:1780 - Signal <temp_ce_vec> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <internal_ce_logic> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <internal_ce> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ce_vec_logic> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <ce_vec> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found T flip-flop for signal <clk_num<0>>.
+    Summary:
+	inferred   1 T-type flip-flop(s).
+Unit <xlclockdriver> synthesized.
+
+
+Synthesizing Unit <default_clock_driver_edge_det>.
+    Related source file is "edge_det_cw.v".
+Unit <default_clock_driver_edge_det> synthesized.
+
+
+Synthesizing Unit <edge_det_cw>.
+    Related source file is "edge_det_cw.v".
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <edge_det_cw> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 1-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <edge_det_cw> ...
+
+Mapping all equations...
+Annotating constraints using XCF file 'E:/xillyFIFO_test2-master/edge_det/edge_det_cw.xcf'
+XCF parsing done.
+WARNING:Xst:2173 - Found black boxes on which forward tracing can not be performed on edge 'clk':
+ persistentdff_inst
+WARNING:Xst:2174 - These might be cores which have not been read
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block edge_det_cw, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : edge_det_cw.ngr
+Top Level Output File Name         : edge_det_cw
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 3
+#      GND                         : 1
+#      LUT2                        : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 2
+#      FDE                         : 1
+#      FDRE                        : 1
+# Others                           : 2
+#      TIMESPEC                    : 1
+#      xlpersistentdff             : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx110tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               2  out of  69120     0%  
+ Number of Slice LUTs:                    1  out of  69120     0%  
+    Number used as Logic:                 1  out of  69120     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      3
+   Number with an unused Flip Flop:       1  out of      3    33%  
+   Number with an unused LUT:             2  out of      3    66%  
+   Number of fully used LUT-FF pairs:     0  out of      3     0%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                           4
+ Number of bonded IOBs:                   0  out of    640     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                        | Load  |
+-----------------------------------+--------------------------------------------------------------+-------+
+clk                                | NONE(edge_det_x0/edge_detect_7f18019072/delay/op_mem_20_24_0)| 2     |
+-----------------------------------+--------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 0.000ns
+   Maximum output required time after clock: 1.045ns
+   Maximum combinational path delay: 0.334ns
+
+=========================================================================
+Timing constraint: TS_clk_392fde13 = PERIOD TIMEGRP "clk_392fde13" 10 nS HIGH 5 nS
+-------------------------------------------------------------------------
+WARNING:Xst:1415 - No path found for this constraint.
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.57 secs
+ 
+--> 
+
+Total memory usage is 286212 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   22 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

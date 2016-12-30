@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-12-27T12:57:59</DateModified>
+  <DateModified>2016-12-29T21:43:30</DateModified>
   <ModuleName>mc_ctrl</ModuleName>
-  <SummaryTimeStamp>2016-12-27T12:57:59</SummaryTimeStamp>
-  <SavedFilePath>E:/xillyFIFO_test/xillyFIFO_test/mc_ctrl/__xps/ise/mc_ctrl.xreport</SavedFilePath>
+  <SummaryTimeStamp>2016-12-29T21:43:30</SummaryTimeStamp>
+  <SavedFilePath>E:/xillyFIFO_test2-master/mc_ctrl/__xps/ise/mc_ctrl.xreport</SavedFilePath>
   <FilterFile>filter.filter</FilterFile>
-  <SavedFilterFilePath>E:/xillyFIFO_test/xillyFIFO_test/mc_ctrl/__xps/ise</SavedFilterFilePath>
+  <SavedFilterFilePath>E:/xillyFIFO_test2-master/mc_ctrl/__xps/ise</SavedFilterFilePath>
   <DateInitialized>2016-12-27T12:57:58</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

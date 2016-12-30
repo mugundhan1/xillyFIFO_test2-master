@@ -1,6 +1,0 @@
-verilog work "prog_full_gen.v"
-verilog work "hdr_ram.v"
-verilog work "fr_ctr.v"
-verilog work "ctrl_mod.v"
-verilog work "ram_test.vf"
-verilog work "/media/Mordor/linux/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

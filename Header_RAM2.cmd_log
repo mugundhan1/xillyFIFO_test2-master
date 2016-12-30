@@ -1,0 +1,16 @@
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/Header_RAM2.v -lang verilog -prj xillycounter -o Header_RAM2.spl -module Header_RAM2 -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Header_RAM2.spl E:/xillyFIFO_test2-master/Header_RAM2.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/Header_RAM2.v -lang verilog -prj xillycounter -o Header_RAM2.spl -module Header_RAM2 -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Header_RAM2.spl E:/xillyFIFO_test2-master/Header_RAM2.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/Header_RAM2.v -lang verilog -prj xillycounter -o Header_RAM2.spl -module Header_RAM2 -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Header_RAM2.spl E:/xillyFIFO_test2-master/Header_RAM2.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/Header_RAM2.v -lang verilog -prj xillycounter -o Header_RAM2.spl -module Header_RAM2 -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Header_RAM2.spl E:/xillyFIFO_test2-master/Header_RAM2.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/Header_RAM2.v -lang verilog -prj xillycounter -o Header_RAM2.spl -module Header_RAM2 -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Header_RAM2.spl E:/xillyFIFO_test2-master/Header_RAM2.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/Header_RAM2.v -lang verilog -prj xillycounter -o Header_RAM2.spl -module Header_RAM2 -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Header_RAM2.spl E:/xillyFIFO_test2-master/Header_RAM2.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/Header_RAM2.v -lang verilog -prj xillycounter -o Header_RAM2.spl -module Header_RAM2 -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Header_RAM2.spl E:/xillyFIFO_test2-master/Header_RAM2.sym 
+vhdtdtfi -lib work E:/xillyFIFO_test2-master/Header_RAM2.v -lang verilog -prj xillycounter -o Header_RAM2.spl -module Header_RAM2 -template E:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family virtex5 -w Header_RAM2.spl E:/xillyFIFO_test2-master/Header_RAM2.sym 

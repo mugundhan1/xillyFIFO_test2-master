@@ -1,0 +1,18 @@
+[
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  [
+    [
+      'xlpersistentdff.ngc',
+      undef,
+    ],
+    '/media/Mordor/xillyFIFO_test2-master/netlist/sysgen/perl_results.v',
+  ],
+]

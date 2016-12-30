@@ -1,5 +1,8 @@
-E:\xillyFIFO_test\xillyFIFO_test\xillyctr.ngc 1482824582
-ipcore_dir/ctr_fifo.ngc 1482553234
-ipcore_dir/xilly_data_fifo.ngc 1482821254
-E:\xillyFIFO_test\xillyFIFO_test/xillybus_core.ngc 1482553232
+E:\xillyFIFO_test2-master\xillyctr.ngc 1483019567
+ipcore_dir/frame_counter.ngc 1482989358
+ipcore_dir/ctr_fifo.ngc 1482904514
+ipcore_dir/xilly_data_fifo.ngc 1482904514
+edge_det/edge_det_cw.ngc 1483019331
+edge_det/xlpersistentdff.ngc 1483018940
+E:\xillyFIFO_test2-master/xillybus_core.ngc 1482904514
 OK

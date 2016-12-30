@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.5
 //  \   \         Application : xaw2verilog
 //  /   /         Filename : clk_ctrl.v
-// /___/   /\     Timestamp : 12/27/2016 11:40:42
+// /___/   /\     Timestamp : 12/28/2016 11:41:07
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: xaw2verilog -intstyle E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/clk_ctrl.xaw -st clk_ctrl.v
+//Command: xaw2verilog -intstyle E:/xillyFIFO_test2-master/ipcore_dir/clk_ctrl.xaw -st clk_ctrl.v
 //Design Name: clk_ctrl
 //Device: xc5vlx110t-1ff1136
 //

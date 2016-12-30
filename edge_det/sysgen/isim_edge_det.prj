@@ -1,0 +1,3 @@
+verilog work edge_det.v
+verilog work edge_det_cw.v
+verilog work $XILINX/verilog/src/glbl.v

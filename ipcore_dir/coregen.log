@@ -1,65 +1,64 @@
 INFO:sim:172 - Generating IP...
-Applying current project options...
-Finished applying current project options.
-WARNING:sim - A core named 'xilly_data_fifo' already exists in the project.
-   Output products for this core may be overwritten.
-Resolving generics for 'xilly_data_fifo'...
-WARNING:sim - A core named 'xilly_data_fifo' already exists in the project.
-   Output products for this core may be overwritten.
-Applying external generics to 'xilly_data_fifo'...
-Delivering associated files for 'xilly_data_fifo'...
-Delivering EJava files for 'xilly_data_fifo'...
-Generating implementation netlist for 'xilly_data_fifo'...
-INFO:sim - Pre-processing HDL files for 'xilly_data_fifo'...
-WARNING:sim - BlackBox generator run option '-ifmt' found multiple times. Only
-   the first occurence is considered.
-Running synthesis for 'xilly_data_fifo'
+WARNING:sim - Verilog simulation file type 'Behavioral' is not valid for this
+   core. Overriding with simulation file type 'Structural'.
+Resolving generics for 'frame_counter'...
+WARNING:sim - Verilog simulation file type 'Behavioral' is not valid for this
+   core. Overriding with simulation file type 'Structural'.
+Applying external generics to 'frame_counter'...
+Delivering associated files for 'frame_counter'...
+Generating implementation netlist for 'frame_counter'...
+INFO:sim - Pre-processing HDL files for 'frame_counter'...
+Running synthesis for 'frame_counter'
 Running ngcbuild...
-Writing VEO instantiation template for 'xilly_data_fifo'...
-Writing Verilog behavioral simulation model for 'xilly_data_fifo'...
-WARNING:sim - Overwriting existing file
-   E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/tmp/_cg/xilly_data_fifo/doc/fifo_
-   generator_v9_3_vinfo.html with file from view xilinx_documentation
+Writing VEO instantiation template for 'frame_counter'...
+WARNING:sim - Verilog simulation file type 'Behavioral' is not valid for this
+   core. Overriding with simulation file type 'Structural'.
+Writing Verilog structural simulation model for 'frame_counter'...
+WARNING:sim - Verilog simulation file type 'Behavioral' is not valid for this
+   core. Overriding with simulation file type 'Structural'.
 Delivered 3 files into directory
-E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/tmp/_cg/xilly_data_fifo
+E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/frame_counter
 Delivered 1 file into directory
-E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/tmp/_cg/xilly_data_fifo
+E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/frame_counter
 Generating ASY schematic symbol...
 INFO:sim:949 - Finished generation of ASY schematic symbol.
-Generating SYM schematic symbol for 'xilly_data_fifo'...
+Generating SYM schematic symbol for 'frame_counter'...
 Generating metadata file...
-Regenerating ISE project file for 'xilly_data_fifo'...
+Generating ISE project file for 'frame_counter'...
 Generating ISE project...
-XCO file found: xilly_data_fifo.xco
-XMDF file found: xilly_data_fifo_xmdf.tcl
-Adding E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/tmp/_cg/xilly_data_fifo.asy
--view all -origin_type imported
-Adding E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/tmp/_cg/xilly_data_fifo.ngc
--view all -origin_type created
-Checking file
-"E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/tmp/_cg/xilly_data_fifo.ngc" for
-project device match ...
-File "E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/tmp/_cg/xilly_data_fifo.ngc"
-device information matches project device.
-Adding E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/tmp/_cg/xilly_data_fifo.sym
--view all -origin_type imported
-Adding E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/tmp/_cg/xilly_data_fifo.v
--view all -origin_type created
+XCO file found: frame_counter.xco
+XMDF file found: frame_counter_xmdf.tcl
+Adding E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/core_resources.txt -view all
+-origin_type imported
+Adding E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/frame_counter.asy -view all
+-origin_type imported
+Adding E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/frame_counter.ngc -view all
+-origin_type created
+Checking file "E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/frame_counter.ngc"
+for project device match ...
+File "E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/frame_counter.ngc" device
+information matches project device.
+Adding E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/frame_counter.sym -view all
+-origin_type imported
+Adding E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/frame_counter.v -view all
+-origin_type created
 INFO:HDLCompiler:1845 - Analyzing Verilog file
-   "E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/tmp/_cg/xilly_data_fifo.v" into
-   library work
+   "E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/frame_counter.v" into library
+   work
 INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
-Adding E:/xillyFIFO_test/xillyFIFO_test/ipcore_dir/tmp/_cg/xilly_data_fifo.veo
--view all -origin_type imported
+Adding E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/frame_counter.veo -view all
+-origin_type imported
+Adding E:/xillyFIFO_test2-master/ipcore_dir/tmp/_cg/gui_latency.txt -view all
+-origin_type imported
 INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
    Please set the new top explicitly by running the "project set top" command.
    To re-calculate the new top automatically, set the "Auto Implementation Top"
    property to true.
-Top level has been set to "/xilly_data_fifo"
+Top level has been set to "/frame_counter"
 Generating README file...
 Generating FLIST file...
 INFO:sim:948 - Finished FLIST file generation.
 Launching README viewer...
 Moving files to output directory...
 Finished moving files to output directory
-Wrote CGP file for project 'xilly_data_fifo'.
+Wrote CGP file for project 'frame_counter'.

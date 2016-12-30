@@ -60,3 +60,92 @@ par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf
 trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
 bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
 bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
+xst -intstyle ise -ifn "E:/xillyFIFO_test2-master/xillyctr.xst" -ofn "E:/xillyFIFO_test2-master/xillyctr.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd edge_det -nt timestamp -uc top.ucf -p xc5vlx110t-ff1136-1 xillyctr.ngc xillyctr.ngd  
+map -intstyle ise -p xc5vlx110t-ff1136-1 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o xillyctr_map.ncd xillyctr.ngd xillyctr.pcf 
+par -w -intstyle ise -ol high -mt off xillyctr_map.ncd xillyctr.ncd xillyctr.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml xillyctr.twx xillyctr.ncd -o xillyctr.twr xillyctr.pcf -ucf top.ucf 
+bitgen -intstyle ise -f xillyctr.ut xillyctr.ncd 
